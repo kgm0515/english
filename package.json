@@ -1,0 +1,16 @@
+{
+  "name": "englist",
+  "version": "1.0.0",
+  "description": "学习英语",
+  "main": "middle-school-vocabulary.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/kgm0515/englist.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
