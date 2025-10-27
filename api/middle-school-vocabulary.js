@@ -3902,6 +3902,8 @@ middleSchoolVocabulary = [
     meaning: "敲鼓",
     unit: "Unit 1 Can you play the guitar?",
     grade: "七年级下册 (Grade 7B)",
+    example: "He plays the drums in the band.",
+    exampleTranslation: "他在乐队里打鼓。",
   },
   {
     id: "8271vvyhzmp",
