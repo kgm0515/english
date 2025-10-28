@@ -37,8 +37,12 @@ git push -u origin main
 1. 打开您的 GitHub 仓库页面
 2. 点击右上角的 **Settings**（设置）
 3. 在左侧菜单中找到并点击 **Pages**
-4. 在 **Source** 部分，选择 **GitHub Actions**（而不是 Branch）
-5. 保存更改（无需手动操作，系统会自动保存）
+4. 在 **Source** 部分：
+   - 选择 **GitHub Actions**（而不是 Branch）
+   - 或者先选择 **Deploy from a branch**，然后选择 **main** 分支和 `/ (root)` 路径
+   - 点击 **Save**
+
+**重要提示**：如果您的工作流添加了 `enablement: true` 参数，系统可能会自动启用。如果仍然报错，请手动完成此步骤。
 
 ### 第三步：触发部署
 
@@ -85,7 +89,34 @@ GitHub Actions 会自动重新部署您的网站。
 
 ## 🔧 故障排除
 
-### 问题 1: Pages 页面显示 "GitHub Actions 不是受支持的分支或文件夹"
+### 问题 1: Setup Pages 阶段报错 "Get Pages site failed"
+
+**错误信息**：
+
+```
+Error: Get Pages site failed. Please verify that the repository has Pages enabled
+```
+
+**解决方案**：
+
+如果首次部署遇到此错误，需要手动启用 GitHub Pages：
+
+1. **方法 A（推荐）**：
+
+   - 进入仓库的 **Settings** → **Pages**
+   - 在 **Source** 选择 **Deploy from a branch**
+   - 分支选择 **main**，文件夹选择 **/ (root)**
+   - 点击 **Save**
+   - 等待 1-2 分钟后，重新推送代码或点击 Run workflow
+
+2. **方法 B**：
+
+   - 在 Actions 页面重新运行工作流
+   - 添加了 `enablement: true` 参数的工作流会尝试自动启用
+
+3. 启用成功后，后续部署将正常工作
+
+### 问题 2: Pages 页面显示 "GitHub Actions 不是受支持的分支或文件夹"
 
 **解决方案**：
 
@@ -93,7 +124,7 @@ GitHub Actions 会自动重新部署您的网站。
 2. 检查文件路径是否正确（`.github` 必须在项目根目录）
 3. 重新推送到 GitHub
 
-### 问题 2: 部署失败
+### 问题 3: 部署失败
 
 **解决方案**：
 
@@ -101,7 +132,7 @@ GitHub Actions 会自动重新部署您的网站。
 2. 检查 `index.html` 文件是否存在
 3. 确保没有语法错误
 
-### 问题 3: 网站显示 404 或空白页
+### 问题 4: 网站显示 404 或空白页
 
 **解决方案**：
 
@@ -109,7 +140,7 @@ GitHub Actions 会自动重新部署您的网站。
 2. 检查资源路径是否正确（使用相对路径）
 3. 清除浏览器缓存后重新访问
 
-### 问题 4: 资源文件无法加载
+### 问题 5: 资源文件无法加载
 
 **解决方案**：
 
