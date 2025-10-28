@@ -3,41 +3,23 @@
 Thumbs.db
 desktop.ini
 
-# 编辑器配置
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# Node.js
-node_modules/
-npm-debug.log
-package-lock.json
-yarn.lock
-
-# 构建产物
-dist/
-build/
-
 # 日志文件
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # 临时文件
-tmp/
-temp/
 *.tmp
+*.temp
 
-# 备份文件
-*.bak
-*.backup
-ARCHITECTURE.md.bak
-
-# 文档文件（可选）
-README.en.md
-ARCHITECTURE.md
-
-# 资源文件
-*.txt
- 资源/
-
+# 构建产物（如果需要）
+dist/
+build/

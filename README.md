@@ -21,13 +21,15 @@
 https://你的用户名.github.io/仓库名/
 ```
 
+**详细部署步骤请参考：[DEPLOYMENT.md](./DEPLOYMENT.md)**
+
 ### 方式二：本地运行
 
 1. 克隆项目
 
 ```bash
-git clone https://github.com/你的用户名/仓库名.git
-cd 仓库名
+git clone https://github.com/kgm0515/english.git
+cd english
 ```
 
 2. 直接用浏览器打开 `index.html` 即可
@@ -49,52 +51,51 @@ cd 仓库名
 - **UI 框架**：Tailwind CSS
 - **语音合成**：Web Speech API
 - **数据存储**：LocalStorage
+- **部署平台**：GitHub Pages
 
 ## 📦 项目结构
 
 ```
-endlish/
+english/
 ├── index.html                      # 主页面
 ├── api/
 │   └── middle-school-vocabulary.js # 初中词汇数据
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml             # GitHub Pages部署配置
-└── README.md                      # 项目说明
+├── DEPLOYMENT.md                   # 详细部署指南
+└── README.md                       # 项目说明
 ```
 
 ## 🌐 部署到 GitHub Pages
 
-项目已配置 GitHub Actions 自动部署，按以下步骤操作：
+项目已配置 GitHub Actions 自动部署，详细步骤请参考：
 
-### 1. 准备工作
+📖 **[DEPLOYMENT.md](./DEPLOYMENT.md)** - 完整的部署指南
 
-确保项目已推送到 GitHub 仓库。
+### 快速部署步骤
 
-### 2. 启用 GitHub Pages
+1. **推送代码到 GitHub**
 
-1. 进入 GitHub 仓库页面
-2. 点击 **Settings**（设置）
-3. 在左侧菜单找到 **Pages**
-4. 在 **Source** 中选择 **GitHub Actions**
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git push origin main
+   ```
 
-### 3. 推送代码触发部署
+2. **启用 GitHub Pages**
 
-```bash
-git add .
-git commit -m "添加GitHub Pages部署配置"
-git push origin main
-```
+   - 进入仓库的 **Settings** → **Pages**
+   - 在 **Source** 中选择 **GitHub Actions**
 
-GitHub Actions 会自动部署项目，完成后访问地址：
+3. **等待部署完成**
 
-```
-https://你的用户名.github.io/仓库名/
-```
+   - 在 **Actions** 标签页查看部署进度
 
-### 4. 查看部署状态
-
-在仓库的 **Actions** 标签页可以查看部署进度和状态。
+4. **访问网站**
+   ```
+   https://你的用户名.github.io/仓库名/
+   ```
 
 ## 🤝 贡献
 
