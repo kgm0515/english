@@ -33,3 +33,11 @@ temp/
 *.backup
 ARCHITECTURE.md.bak
 
+# 文档文件（可选）
+README.en.md
+ARCHITECTURE.md
+
+# 资源文件
+*.txt
+ 资源/
+
